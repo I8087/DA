@@ -63,7 +63,7 @@ void DA_split(DA *list1, DA *list2, int index);
 void DA_print(DA *list);
 
 /* Lazily initialize a dynamic array without giving an initial size. */
-static inline DA_qinit(DA *list) {
+static inline void DA_qinit(DA *list) {
     DA_init(list, 5);
 }
 
