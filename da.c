@@ -27,6 +27,7 @@
  *
  */
 
+#include <stdio.h>
 #include <stdlib.h>
 #include "da.h"
 
@@ -225,6 +226,19 @@ void DA_print(DA *list) {
     putchar('{');
     for (int i=0; i<list->len; i++) {
         printf("%d", DA_get(list, i));
+        if (i != list->len-1) printf(", ");
+    }
+    printf("}\n");
+}
+
+/**
+ * Displays the dynamic array via stdout,
+ * while treating each item as a pointer to a string.
+ */
+void DA_prints(DA *list) {
+    putchar('{');
+    for (int i=0; i<list->len; i++) {
+        printf("\"%s\"", (char*) DA_get(list, i));
         if (i != list->len-1) printf(", ");
     }
     printf("}\n");

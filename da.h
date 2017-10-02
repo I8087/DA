@@ -61,6 +61,7 @@ void DA_extend(DA *list1, DA *list2);
 void DA_merge(DA *list1, DA *list2);
 void DA_split(DA *list1, DA *list2, int index);
 void DA_print(DA *list);
+void DA_prints(DA *list);
 
 /* Lazily initialize a dynamic array without giving an initial size. */
 static inline void DA_qinit(DA *list) {
